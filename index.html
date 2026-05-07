@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery practice</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #draggable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            border: 5px solid seagreen;
+            background-color: #8b8484;
+            border-radius: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script>
+       
+    </script>
+
+</head>
+
+<body>
+    <p>Hi</p>
+    <p>This is </p>
+    <p>Mahabub Alam</p>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+
+
+    <div id="draggable" class="ui-widget-content">
+        <p>Drag me around</p>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#Show").click(function () {
+                $('p').show(1000);
+            })
+            $("#hide").click(function () {
+                $('p').fadeToggle(1000);
+            })
+        })
+
+         $(function () {
+            $("#draggable").draggable();
+        });
+    </script>
+
+
+</body>
+
+</html>
