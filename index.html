@@ -23,6 +23,8 @@
             margin: 0;
             padding: 0;
             width: 60%;
+            /* display: none; */
+            
         }
 
         #sortable li {
@@ -67,6 +69,7 @@
         <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
         <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
     </ul>
+    <button id="button">cliked</button>
 
 
 
@@ -85,9 +88,16 @@
             $("#draggable").draggable();
         })
 
+        
+        $("#button").click(function(){
+            $('#sortable').slideUp(2000);
+        })
+
+
         $(function () {
             $("#sortable").sortable();
         });
+
     </script>
 
 
