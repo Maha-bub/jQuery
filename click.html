@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery style apply</title>
+     <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <div id="card">
+        <h3 id="identity">Hi,I'm Mahabub Alam</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quos culpa dolore maiores. Dolores voluptatem ratione veniam iure sit, incidunt sequi eaque, laborum obcaecati maxime nisi. Error sequi laboriosam commodi.</p>
+    </div>
+    <button id="btn">Change-Css</button>
+
+
+
+    <script>
+        $('#btn').click(function(){
+            $('#card').css({
+                "background-color":"green",
+                "width":"300px",
+                "align-items":"center",
+                "justify-items":"center",
+                "padding":"20px",
+                "border":"5px solid red",
+                "border-radius":"15px",
+                "margin":"0 auto"
+            })
+        })
+    </script>
+    
+</body>
+</html>
