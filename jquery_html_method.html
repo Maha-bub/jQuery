@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html manupulation</title>
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+
+<body>
+    <div class="section">
+        <h3>Top headlines today news.</h3>
+        <p id="pera">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At doloremque beatae quasi amet
+            consequatur consectetur voluptate quo iure? Non, culpa corrupti? Pariatur praesentium maxime quasi tempore
+            odio mollitia culpa officia obcaecati maiores minima doloremque in est, perspiciatis quaerat sapiente,
+            tenetur accusamus dolores laborum. Quisquam id quaerat deleniti animi, accusamus maiores. Error quibusdam
+            
+         
+        </p>
+        <button id="btn">Modify</button>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#pera").html('this is our golden bangladesh')
+                $("#pera").before('our cultural hero osman hadi')
+                $("#pera").after('this is our golden bangladesh')
+            })
+        })
+
+        
+
+    </script>
+</body>
+
+</html>
