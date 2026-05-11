@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        input {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    Enter your name: <br>
+     <input id="email" type="text">
+    <p>Write something in the input field, and then click outside the field to lose focus (blur).</p>
+    <script>
+        $(document).ready(function () {
+            $("#email").blur(function () {
+                $(this).css(
+                    "background","green",
+                    
+                );
+        });
+        });
+    </script>
+</body>
+
+</html>
