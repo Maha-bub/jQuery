@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html attributes modify using jquery</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <style>
+       #img{
+            width: 100px;
+           transition: 2s ease; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gallery">
+        <h4>This is our natural Bangladesh </h4>
+        <img id="img" src="" alt=""><br>
+        <button id="btn">Click to Expand</button>
+
+        <div>
+            <input id="check" type="checkbox" name="" id=""><br>
+            <button id="btn-alt">Check</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#img').css({
+                    'width': '300px',
+                });
+            })
+        })
+
+        $('#img').attr("src", "image/download.jpg")
+
+        $("#btn-alt").click(function () {
+            $("#check").prop("checked", true)
+        })
+
+    </script>
+</body>
+
+</html>
