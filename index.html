@@ -24,8 +24,8 @@
             padding: 0;
             width: 60%;
             /* display: none; */
-            
-            
+
+
         }
 
         #sortable li {
@@ -78,13 +78,16 @@
     <script>
         $(document).ready(function () {
 
-
-            $("#Show").click(function () {
-                $('p').show(1000);
-            })
             $("#hide").click(function () {
-                $('p').fadeToggle(1000);
+                $('p').hide(2000);
             })
+
+            $("#show").click(function () {
+                $('p').show(600);
+            })
+            // $("#hide").click(function () {
+            //     $('p').fadeToggle(1000);
+            // })
         })
 
 
@@ -95,8 +98,8 @@
 
 
 
-        
-        $("#button").click(function(){
+
+        $("#button").click(function () {
             $('#sortable').slideUp(2000);
         })
 
@@ -105,6 +108,14 @@
         $(function () {
             $("#sortable").sortable();
         });
+
+        $("#sortable").
+            fadeTo
+            (
+                "slow"
+                ,
+                0.2
+            );
     </script>
 
 

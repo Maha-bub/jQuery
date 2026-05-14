@@ -13,14 +13,30 @@
 
 <body>
 
+    Enter your email: <br>
+     <input id="email" type="text"><br><br>
     Enter your name: <br>
-     <input id="email" type="text">
+     <input id="name" type="text"><br><br>
+    Enter your phone: <br>
+     <input id="phone" type="text"><br><br>
     <p>Write something in the input field, and then click outside the field to lose focus (blur).</p>
     <script>
         $(document).ready(function () {
             $("#email").blur(function () {
                 $(this).css(
                     "background","green",
+                    
+                );
+        });
+            $("#name").focus(function () {
+                $(this).css(
+                    "background","green",
+                    
+                );
+        });
+            $("#phone").mouseenter(function () {
+                $(this).css(
+                    "background","tomato",
                     
                 );
         });
