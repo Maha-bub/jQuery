@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change use SetInterval</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .colorbox {
+            width: 350px;
+            height: 300px;
+            border: 3px solid #ffc400;
+            border-radius: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="colorbox"></div>
+
+    <script>
+
+        $(function () {
+
+            let colors = [
+                {
+                    backgroundColor: "green",
+                    frontColor: "black"
+                },
+                {
+                    backgroundColor: "yellow",
+                    frontColor: "black"
+                },
+                {
+                    backgroundColor: "red",
+                    frontColor: "white"
+                },
+                {
+                    backgroundColor: "blue",
+                    frontColor: "white"
+                },
+                {
+                    backgroundColor: "white",
+                    frontColor: "black"
+                },
+                {
+                    backgroundColor: "pink",
+                    frontColor: "gray"
+                }
+            ];
+
+            let i = 0;
+
+            setInterval(function () {
+
+                $(".colorbox").css({
+                    backgroundColor: colors[i].backgroundColor,
+                    color: colors[i].frontColor
+                }).html("<h1>" + colors[i].backgroundColor + "</h1>");
+
+                i++;
+
+                if (i >= colors.length) {
+                    i = 0;
+                }
+
+            }, 1000);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
