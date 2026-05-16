@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color & Image Change</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .colorbox {
+            width: 400px;
+            height: 350px;
+            border: 3px solid #ffc005;
+            border-radius: 15px;
+
+            margin: 30px auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            font-weight: bold;
+
+            overflow: hidden;
+        }
+
+        .colorbox img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="colorbox"></div>
+
+    <script>
+
+        $(function () {
+
+            // Background color array
+            let bgColors = ["green","yellow","red","blue","white","tomato"];
+
+           
+            let textColors = ["black",  "black",  "black", "white","black","gray"];
+
+            // Image array
+            let images = [
+            "./image/1.jpg",   
+            "./image/2.webp",   
+            "./image/3.jpg",   
+            "./image/4.jpg",   
+            "./image/download.jpg",   
+            "./image/download (1).jpg",   
+            
+            ];
+
+            let i = 0;
+
+            setInterval(function () {
+
+                $(".colorbox").css({
+                    backgroundColor: bgColors[i],
+                    color: textColors[i]
+                });
+
+                $(".colorbox").html(`
+                    <h1>${bgColors[i]}</h1>
+                    <img src="${images[i]}" alt="image">
+                `);
+
+                i++;
+
+                if (i >= images.length) {
+                    i = 0;
+                }
+
+            }, 1000);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
